@@ -19,7 +19,7 @@ public class KartuMahasiswa {
         KartuMahasiswa mahasiswa = new KartuMahasiswa();
 
         System.out.println("==============================");
-        System.out.println("       KARTU MAHASISWA PBO 2");
+        System.out.println("KARTU MAHASISWA PBO 2");
         System.out.println("==============================");
         System.out.println("Nama       : " + mahasiswa.nama);
         System.out.println("NPM        : " + mahasiswa.npm);
