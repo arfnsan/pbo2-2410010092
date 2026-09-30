@@ -3,7 +3,7 @@
 1. HaloPBO2
    <img width="1919" height="1079" alt="Screenshot 2026-09-27 204816" src="https://github.com/user-attachments/assets/a9ace269-e556-4362-9098-cfec2b2fac0a" />
 
-2. Kartu Mahasiswa
+2. Kartu Mahasiswa (Pemakaian AI untuk merapihkan code agar pembacaan codenya lebih mudah dipahami)
    <img width="1919" height="1079" alt="Screenshot 2026-09-27 204825" src="https://github.com/user-attachments/assets/32085b29-208e-40bf-8c30-eec13326706d" />
 
 3. git log --oneline
