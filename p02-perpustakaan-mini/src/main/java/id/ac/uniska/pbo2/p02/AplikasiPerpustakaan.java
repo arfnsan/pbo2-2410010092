@@ -4,6 +4,8 @@
  */
 package id.ac.uniska.pbo2.p02;
 
+import java.util.List;
+
 /**
  *
  * @author arsan
@@ -17,6 +19,9 @@ public class AplikasiPerpustakaan {
         perpus.tambah(new Buku("B001", "Laskar Pelangi", 2005, "Andrea Hirata"));
         perpus.tambah(new Buku("B002", "Clean Code", 2008, "Robert C. Martin"));
         perpus.tambah(new Majalah("M001", "Majalah Teknologi Kita", 2026, "Agustus"));
+        
+        // Menambahkan koleksi Skripsi untuk pengujian Latihan Mandiri
+        perpus.tambah(new Skripsi("S001", "Sistem Informasi Perpustakaan", 2024, "Ahmad", "Teknik Informatika"));
 
         Anggota siti = new Anggota("2410010123", "Siti Rahmah");
         Anggota budi = new Anggota("2410010456", "Budi Santoso");
@@ -28,7 +33,9 @@ public class AplikasiPerpustakaan {
         cetakPinjam(perpus, "B002", budi);
         cetakPinjam(perpus, "M001", budi);
 
-        System.out.println("Peminjam B002: " + perpus.getPeminjam("B002").nama());
+        if (perpus.getPeminjam("B002") != null) {
+            System.out.println("Peminjam B002: " + perpus.getPeminjam("B002").nama());
+        }
         System.out.println();
 
         cetakKembali(perpus, "B002", 2);
@@ -37,12 +44,23 @@ public class AplikasiPerpustakaan {
         System.out.println();
         System.out.println("Koleksi tersedia: " + perpus.jumlahTersedia()
                 + " dari " + perpus.getDaftarKoleksi().size());
+
+        // --- Uji Fitur Latihan Mandiri ---
+        System.out.println();
+        String kataKunci = "code";
+        List<Koleksi> hasilCari = perpus.cariJudul(kataKunci);
+        System.out.println("Hasil pencarian \"" + kataKunci + "\": " + hasilCari.size() + " koleksi");
+        for (Koleksi k : hasilCari) {
+            System.out.println(k);
+        }
+
+        cetakPinjam(perpus, "S001", siti);
     }
 
     private static void tampilkanDaftar(Perpustakaan perpus) {
         System.out.println("=== Daftar Koleksi ===");
         for (Koleksi k : perpus.getDaftarKoleksi()) {
-            System.out.println(k); // otomatis memanggil toString()
+            System.out.println(k);
         }
     }
 
