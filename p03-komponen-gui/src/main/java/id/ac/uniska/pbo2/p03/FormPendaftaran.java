@@ -1,3 +1,5 @@
+package id.ac.uniska.pbo2.p03;
+
 
 import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.FlatLaf;
