@@ -32,7 +32,6 @@ Error dari kompiler : Koleksi is abstract; cannot be instantiated. Karena kelas 
 Jawab : 
 - Kalau Anotasi @Override Masih Terpasang : 
 Error, karena java itu case sensitive yang artinya membedakan huruf yang besar dan kecil.
-
 - Kalau Anotasi @Override Dihapus :
 Java mengira hitungdenda adalah method baru biasa buatan sendiri.
 
