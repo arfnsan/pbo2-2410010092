@@ -19,22 +19,26 @@ Jawab :
 - Intermediate container : Wadah untuk mengelompokkan komponen. Contoh: JPanel, JScrollPane, JTabbedPane.
 
 - Atomic component Komponen yang berinteraksi langsung dengan pengguna. Contoh: JLabel, JTextField, JButton.
+  
 
 2. Mengapa kedua JRadioButton perlu diberi properti buttonGroup yang sama?
 
 Jawab : 
 Agar RadioButton tersebut hanya bisa dilihin salah satunya saja.
 
+
 3. Kapan Anda memilih JComboBox dibandingkan JRadioButton?
 
 Jawab : 
 Pakai JComboBox kalau pilihannya banyak dan area form terbatas. Pakai JRadioButton kalau hanya memilih satu dari sedikit pilihan dan area form luas.
+
 
 4. Mengapa kode di dalam initComponents() tidak boleh diedit langsung, dan di mana kode tambahan
 seharusnya ditulis?
 
 Jawab : 
 initComponents() tidak boleh diedit karena dia kode yang otomatis dibuat oleh Netbeans dari tab design, yang mana Membuat label, mengatur properti  dan menyusun GroupLayout. Sebaiknya kode tambahan ditulis setelah blok kode initComponents().
+
 
 5. Mengapa FlatLightLaf.setup() harus dipanggil sebelum form dibuat?
 
