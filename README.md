@@ -52,10 +52,11 @@ Aturan yang dilanggar adalah Enkapsulasi yang menyembunyikan data dan mengontrol
 
 <h1>P3</h1>
 1.Form Pemesanan Tiket Travel (tema terang dan gelap)
-<img width="1920" height="1080" alt="Screenshot 2026-10-03 001303" src="https://github.com/user-attachments/assets/46d57312-0cbc-471f-8181-5b2316ca39e9" />
-<img width="1920" height="1080" alt="Screenshot 2026-10-03 001312" src="https://github.com/user-attachments/assets/8218325a-823b-4281-8075-1b13d147f87d" />
+   <img width="1920" height="1080" alt="Screenshot 2026-10-03 001303" src="https://github.com/user-attachments/assets/46d57312-0cbc-471f-8181-5b2316ca39e9" />
+   
+   <img width="1920" height="1080" alt="Screenshot 2026-10-03 001312" src="https://github.com/user-attachments/assets/8218325a-823b-4281-8075-1b13d147f87d" />
 
 2. Tab Design Jendela Navigator
-<img width="1920" height="1080" alt="Screenshot 2026-10-03 001637" src="https://github.com/user-attachments/assets/fd3dd8b2-c660-488a-b6b4-1270e79007ac" />
+   <img width="1920" height="1080" alt="Screenshot 2026-10-03 001637" src="https://github.com/user-attachments/assets/fd3dd8b2-c660-488a-b6b4-1270e79007ac" />
 
 
