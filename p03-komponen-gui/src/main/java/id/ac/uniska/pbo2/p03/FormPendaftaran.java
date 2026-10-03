@@ -75,9 +75,11 @@ public class FormPendaftaran extends javax.swing.JFrame {
 
         prodiCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "=== PILIH PRODI ===", "Teknik Informatika", "Sistem Informasi", "Manajemen Informatika" }));
 
+        jenisKelaminGroup.add(lakiRadio);
         lakiRadio.setSelected(true);
         lakiRadio.setText("Laki-laki");
 
+        jenisKelaminGroup.add(perempuanRadio);
         perempuanRadio.setText("Perempuan");
 
         javaCheck.setText("Java");

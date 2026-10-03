@@ -40,7 +40,7 @@ public class FormTiketTravel extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
+        kelasGroup = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -73,11 +73,14 @@ public class FormTiketTravel extends javax.swing.JFrame {
 
         kotaCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "=== PILIH KOTA TUJUAN ===", "Banjarbaru", "Martapura", "Palangka Raya", "Samarinda, Balikpapan" }));
 
+        kelasGroup.add(ekonomiRadio);
         ekonomiRadio.setSelected(true);
         ekonomiRadio.setText("Ekonomi");
 
+        kelasGroup.add(bisnisRadio);
         bisnisRadio.setText("Bisnis");
 
+        kelasGroup.add(eksekutifRadio);
         eksekutifRadio.setText("Eksekutif");
 
         jLabel5.setText("Fasilitas Tambahan");
@@ -165,9 +168,8 @@ public class FormTiketTravel extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(ekonomiRadio)
-                        .addComponent(bisnisRadio))
+                    .addComponent(bisnisRadio)
+                    .addComponent(ekonomiRadio)
                     .addComponent(eksekutifRadio))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -213,7 +215,6 @@ public class FormTiketTravel extends javax.swing.JFrame {
     private javax.swing.JCheckBox asuransiCheck;
     private javax.swing.JCheckBox bagasiCheck;
     private javax.swing.JRadioButton bisnisRadio;
-    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JTextArea catatanArea;
     private javax.swing.JRadioButton ekonomiRadio;
     private javax.swing.JRadioButton eksekutifRadio;
@@ -224,6 +225,7 @@ public class FormTiketTravel extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.ButtonGroup kelasGroup;
     private javax.swing.JComboBox<String> kotaCombo;
     private javax.swing.JCheckBox makanCheck;
     private javax.swing.JTextField namaField;
