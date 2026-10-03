@@ -9,11 +9,11 @@ package id.ac.uniska.pbo2.p01;
  * @author arsan
  */
 public class KartuMahasiswa {
-    String nama = "Muhammad Arifin Ikhsan";
-    String npm = "2410010092";
-    String prodi = "Teknik Informatika";
-    int semester = 5;
-    String alasan = "Ingin memahami pemrograman berorientasi objek lebih lanjut";
+    String nama     = "Muhammad Arifin Ikhsan",
+           npm      = "2410010092",
+           prodi    = "Teknik Informatika",
+           alasan   = "Ingin memahami pemrograman berorientasi objek lebih lanjut";
+    int semester    = 5;
     
     public static void main(String[] args) {
         KartuMahasiswa mahasiswa = new KartuMahasiswa();
