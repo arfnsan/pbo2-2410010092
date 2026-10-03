@@ -17,11 +17,9 @@ Bisa banget. Caranya cukup pakai satu tipe String di awal, lalu pisahkan setiap 
 
 Ini bagian kode String-nya saja:
 
-String nama = "Muhammad Arifin Ikhsan",
-       npm = "2410010092",
-       prodi = "Teknik Informatika",
-       alasan = "Ingin memahami pemrograman berorientasi objek lebih lanjut";
-   <img width="1919" height="1079" alt="Screenshot 2026-09-27 204825" src="https://github.com/user-attachments/assets/32085b29-208e-40bf-8c30-eec13326706d" />
+   <img width="1147" height="386" alt="Screenshot 2026-10-03 134527" src="https://github.com/user-attachments/assets/a4ca7874-3668-4103-a0b5-cd09b04aa556" />
+
+   <img width="1920" height="1080" alt="Screenshot 2026-10-03 134947" src="https://github.com/user-attachments/assets/42730697-bcaa-4886-8267-5c7d92e22c9f" />
 
 4. git log --oneline
    <img width="1920" height="1080" alt="Screenshot 2026-09-18 214355" src="https://github.com/user-attachments/assets/b01bc30f-81fa-4136-9bd9-c68e2c40c6e5" />
@@ -35,13 +33,13 @@ String nama = "Muhammad Arifin Ikhsan",
 
 <h1>Jawaban Eksperimen</h1>
 
-1.Tambahkan baris Koleksi x = new Koleksi("X01", "Uji", 2026); di method main. Apa pesan error
+1. Tambahkan baris Koleksi x = new Koleksi("X01", "Uji", 2026); di method main. Apa pesan error
 dari kompiler dan mengapa?
 
 Jawab : 
 Error dari kompiler : Koleksi is abstract; cannot be instantiated. Karena kelas abstrak tidak bisa membuat objek dengan new.
 
-2.Pada kelas Buku, ubah nama method hitungDenda menjadi hitungdenda. Apa yang terjadi jika anotasi
+2. Pada kelas Buku, ubah nama method hitungDenda menjadi hitungdenda. Apa yang terjadi jika anotasi
 @Override ada, dan jika dihapus?
 
 Jawab : 
@@ -51,12 +49,12 @@ Error, karena java itu case sensitive yang artinya membedakan huruf yang besar d
 - Kalau Anotasi @Override Dihapus :
 Java mengira hitungdenda adalah method baru biasa buatan sendiri.
 
-3.Tambahkan new Buku("B009", "", 2020, "Anonim"). Apa yang terjadi saat program dijalankan?
+3. Tambahkan new Buku("B009", "", 2020, "Anonim"). Apa yang terjadi saat program dijalankan?
 
 Jawab:
 Pesan error menampilkan kalau judul tidak boleh kosong : Exception in thread "main" java.lang.IllegalArgumentException: Judul tidak boleh kosong. Karena di kelas Koleksi sudah diantisipasi supaya judul tidak boleh kosong.
 
-4.Ubah private StatusKoleksi status menjadi public, lalu ubah status B002 langsung dari main
+4. Ubah private StatusKoleksi status menjadi public, lalu ubah status B002 langsung dari main
 menjadi TERSEDIA saat masih dipinjam. Aturan apa yang dilanggar?
 
 Jawab:
@@ -64,7 +62,7 @@ Aturan yang dilanggar adalah Enkapsulasi yang menyembunyikan data dan mengontrol
 
 <h1>P3</h1>
 
-1.Form Pemesanan Tiket Travel (tema terang dan gelap)
+1. Form Pemesanan Tiket Travel (tema terang dan gelap)
    <img width="1920" height="1080" alt="Screenshot 2026-10-03 001303" src="https://github.com/user-attachments/assets/46d57312-0cbc-471f-8181-5b2316ca39e9" />
    
    <img width="1920" height="1080" alt="Screenshot 2026-10-03 001312" src="https://github.com/user-attachments/assets/8218325a-823b-4281-8075-1b13d147f87d" />
@@ -72,4 +70,35 @@ Aturan yang dilanggar adalah Enkapsulasi yang menyembunyikan data dan mengontrol
 2. Tab Design Jendela Navigator
    <img width="1920" height="1080" alt="Screenshot 2026-10-03 001637" src="https://github.com/user-attachments/assets/fd3dd8b2-c660-488a-b6b4-1270e79007ac" />
 
+<h1>Pertanyaan Refleksi</h1>
 
+1. Apa perbedaan top-level container, intermediate container, dan atomic component? Berikan masing-masing
+satu contoh.
+
+Jawab : 
+- Top-level container : Jendela utama yang memiliki bingkai dan judul. Contoh: JFrame, JDialog.
+  
+- Intermediate container : Wadah untuk mengelompokkan komponen. Contoh: JPanel, JScrollPane, JTabbedPane.
+
+- Atomic component Komponen yang berinteraksi langsung dengan pengguna. Contoh: JLabel, JTextField, JButton.
+
+2. Mengapa kedua JRadioButton perlu diberi properti buttonGroup yang sama?
+
+Jawab : 
+Agar RadioButton tersebut hanya bisa dilihin salah satunya saja.
+
+3. Kapan Anda memilih JComboBox dibandingkan JRadioButton?
+
+Jawab : 
+Pakai JComboBox kalau pilihannya banyak dan area form terbatas. Pakai JRadioButton kalau hanya memilih satu dari sedikit pilihan dan area form luas.
+
+4. Mengapa kode di dalam initComponents() tidak boleh diedit langsung, dan di mana kode tambahan
+seharusnya ditulis?
+
+Jawab : 
+initComponents() tidak boleh diedit karena dia kode yang otomatis dibuat oleh Netbeans dari tab design, yang mana Membuat label, mengatur properti  dan menyusun GroupLayout. Sebaiknya kode tambahan ditulis setelah blok kode initComponents().
+
+5. Mengapa FlatLightLaf.setup() harus dipanggil sebelum form dibuat?
+
+Jawab : 
+Agar tema FlatLaf diinisialisasi sebelum komponen swing.
