@@ -53,6 +53,58 @@
             <Property name="horizontalGap" type="int" value="8"/>
             <Property name="verticalGap" type="int" value="8"/>
           </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JButton" name="northButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="NORTH"/>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                  <BorderConstraints direction="First"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JButton" name="westButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="WEST"/>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                  <BorderConstraints direction="Before"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JButton" name="southButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="SOUTH"/>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                  <BorderConstraints direction="Last"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JButton" name="eastButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="EAST"/>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                  <BorderConstraints direction="After"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JButton" name="centerButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="CENTER"/>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                  <BorderConstraints direction="Center"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+          </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="flowPanel">
           <Properties>
@@ -73,8 +125,44 @@
           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout">
             <Property name="alignment" type="int" value="0"/>
             <Property name="horizontalGap" type="int" value="8"/>
-            <Property name="verticalGap" type="int" value="8"/>
           </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JButton" name="baruButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Baru"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="bukaButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Buka"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="simpanButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Simpan"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="simpansebButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Simpan Sebagai"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="cetakButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Cetak"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="bagikanButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Bagikan"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="keluarButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Keluar"/>
+              </Properties>
+            </Component>
+          </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="gridPanel">
           <Properties>
@@ -98,6 +186,53 @@
             <Property name="rows" type="int" value="3"/>
             <Property name="verticalGap" type="int" value="8"/>
           </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JButton" name="jButton1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="1"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="2"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton3">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="3"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton4">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="4"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton5">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="5"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton6">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="6"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton7">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="7"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton8">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="8"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton9">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="9"/>
+              </Properties>
+            </Component>
+          </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="boxPanel">
           <Properties>
@@ -118,6 +253,28 @@
           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBoxLayout">
             <Property name="axis" type="int" value="1"/>
           </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JButton" name="dashboardButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Dashboard"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="mahasiswaButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Data Mahasiswa"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="matkulButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Data Mata Kuliah"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="laporanButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Laporan"/>
+              </Properties>
+            </Component>
+          </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="gabunganPanel">
           <Constraints>
@@ -192,6 +349,13 @@
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="aksiPanel">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.EmptyBorderInfo">
+                    <EmptyBorder bottom="8" left="16" right="16" top="8"/>
+                  </Border>
+                </Property>
+              </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
                   <BorderConstraints direction="Last"/>

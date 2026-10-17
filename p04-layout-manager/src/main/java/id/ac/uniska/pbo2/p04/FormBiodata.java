@@ -48,6 +48,7 @@ public class FormBiodata extends javax.swing.JFrame {
         headerPanel = new javax.swing.JPanel();
         judulLabel = new javax.swing.JLabel();
         keteranganLabel = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
         isiPanel = new javax.swing.JPanel();
         formPanel = new javax.swing.JPanel();
         datadiriLabel = new javax.swing.JLabel();
@@ -67,6 +68,7 @@ public class FormBiodata extends javax.swing.JFrame {
         emailField = new javax.swing.JTextField();
         nomorField = new javax.swing.JTextField();
         npmField = new javax.swing.JTextField();
+        jSeparator2 = new javax.swing.JSeparator();
         tombolPanel = new javax.swing.JPanel();
         batalButton = new javax.swing.JButton();
         simpanButton = new javax.swing.JButton();
@@ -82,6 +84,7 @@ public class FormBiodata extends javax.swing.JFrame {
 
         keteranganLabel.setText("Lengkapi data berikut sesuai Kartu Tanda Mahasiswa.");
         headerPanel.add(keteranganLabel);
+        headerPanel.add(jSeparator1);
 
         getContentPane().add(headerPanel, java.awt.BorderLayout.PAGE_START);
 
@@ -240,10 +243,11 @@ public class FormBiodata extends javax.swing.JFrame {
         formPanel.add(npmField, gridBagConstraints);
 
         isiPanel.add(formPanel, java.awt.BorderLayout.PAGE_START);
+        isiPanel.add(jSeparator2, java.awt.BorderLayout.PAGE_END);
 
         getContentPane().add(isiPanel, java.awt.BorderLayout.CENTER);
 
-        tombolPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(8, 16, 16, 16));
+        tombolPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(8, 16, 8, 16));
         tombolPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT, 8, 0));
 
         batalButton.setText("Batal");
@@ -279,6 +283,8 @@ public class FormBiodata extends javax.swing.JFrame {
     private javax.swing.JPanel isiPanel;
     private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel judulLabel;
     private javax.swing.JLabel keteranganLabel;
     private javax.swing.JLabel kontakLabel;
