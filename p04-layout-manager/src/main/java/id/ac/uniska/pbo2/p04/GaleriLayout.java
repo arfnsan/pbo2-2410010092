@@ -175,6 +175,7 @@ public class GaleriLayout extends javax.swing.JFrame {
 
         layoutTab.addTab("BoxLayout", boxPanel);
 
+        gabunganPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(12, 12, 12, 12));
         gabunganPanel.setLayout(new java.awt.BorderLayout(8, 8));
 
         catatanJudulLabel.setText("Catatan Kegiatan");
