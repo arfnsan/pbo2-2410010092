@@ -57,3 +57,7 @@ Jawaban:
 
 ### 3 dialog konfirmasi keluar.
 <img width="960" height="540" alt="Screenshot 2026-10-24 154448" src="https://github.com/user-attachments/assets/419b19c7-6e49-48fb-b6a3-e6fe1281a47c" />
+
+# Deklarasi Penggunaan AI :
+Di penugasan ini, saya menggunakan Claude AI untuk memahami modul karena ada beberapa langkah yang hampir membuat saya keliru. 
+Dan saya minta Claude untuk membuatkan kode ringkasan dialog pada form Perpustakaan.
