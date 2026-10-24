@@ -212,7 +212,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 4);
         isiPanel.add(namaField, gridBagConstraints);
 
-        prodiCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Teknik Informatika", " " }));
+        prodiCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Teknik Informatika", "Sistem Informasi", "Hukum", "Agama", "Ekonomi", " " }));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
@@ -336,6 +336,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
 
     private void daftarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_daftarButtonActionPerformed
         // TODO add your handling code here:
+        tampilkanRingkasan();
     }//GEN-LAST:event_daftarButtonActionPerformed
 
     private void npmFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_npmFieldKeyReleased
@@ -394,4 +395,20 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
     private javax.swing.JPanel tombolPanel;
     private javax.swing.JRadioButton umumRadio;
     // End of variables declaration//GEN-END:variables
+
+    private void tampilkanRingkasan() {
+        String jenisAnggota = mahasiswaRadio.isSelected() ? "Mahasiswa"
+            : dosenRadio.isSelected() ? "Dosen"
+            : umumRadio.isSelected() ? "Umum" : "-";
+
+        String pesan = "NPM: " + npmField.getText()
+            + "\nNama: " + namaField.getText()
+            + "\nProgram Studi: " + prodiCombo.getSelectedItem()
+            + "\nJenis Anggota: " + jenisAnggota
+            + "\nEmail: " + emailField.getText()
+            + "\nNomor HP: " + nomorField.getText();
+
+        JOptionPane.showMessageDialog(this, pesan, "Ringkasan Pendaftaran",
+            JOptionPane.INFORMATION_MESSAGE);
+    }
 }
