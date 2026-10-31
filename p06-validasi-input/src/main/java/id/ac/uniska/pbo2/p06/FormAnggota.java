@@ -597,7 +597,7 @@ public class FormAnggota extends javax.swing.JFrame {
         }
         alamatArea.setText("");
         prodiCombo.setSelectedIndex(0);
-        mahasiswaRadio.setSelected(true);
+        jenisGroup.clearSelection();
         setujuCheck.setSelected(false);
         tandai(npmField, npmPesanLabel, null);
         tandai(namaField, namaPesanLabel, null);

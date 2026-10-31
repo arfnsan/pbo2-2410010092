@@ -29,6 +29,8 @@ public class UjiValidator {
 
         cek("Nama terlalu pendek", Validator.nama("Al"), false); 
         cek("Nama benar", Validator.nama("Siti Rahmah"), true);
+        cek("Nama berisi angka", Validator.nama("Siti123"), false);
+        cek("Nama dengan spasi dan titik", Validator.nama("Siti R. Rahmah"), true);
 
         cek("Email tanpa domain", Validator.email("siti@"), false);
         cek("Email benar", Validator.email("siti.rahmah@uniska-bjm.ac.id"), true);

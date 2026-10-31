@@ -32,13 +32,16 @@ public class Validator {
         return null;
     }
 
-    public static String nama(String nama) { 
+    public static String nama(String nama) {
         String kosong = wajibDiisi(nama, "Nama");
         if (kosong != null) {
             return kosong;
         }
-        if (nama.trim().length() < 3) { 
+        if (nama.trim().length() < 3) {
             return "Nama minimal 3 huruf";
+        }
+        if (nama.chars().anyMatch(Character::isDigit)) {
+            return "Nama tidak boleh berisi angka";
         }
         return null;
     }
