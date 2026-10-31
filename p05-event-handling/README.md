@@ -60,4 +60,4 @@ Jawaban:
 
 # Deklarasi Penggunaan AI :
 Di penugasan ini, saya menggunakan Claude AI untuk memahami modul karena ada beberapa langkah yang hampir membuat saya keliru. 
-Dan saya minta Claude untuk membuatkan kode ringkasan dialog pada form Perpustakaan.
+Dan saya minta Claude untuk membuatkan beberapa kode aksi pada form Perpustakaannya. 
