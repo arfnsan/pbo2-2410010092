@@ -608,7 +608,7 @@ public class FormAnggota extends javax.swing.JFrame {
         npmField.requestFocusInWindow();
     }
 
-    /** Merah yang mudah dibaca: lebih gelap di tema terang, lebih terang di tema gelap. */
+    // Merah yang mudah dibaca: lebih gelap di tema terang, lebih terang di tema gelap. 
     static Color warnaKesalahan() {
         return FlatLaf.isLafDark() ? new Color(0xFF8A80) : new Color(0xC62828);
     }
