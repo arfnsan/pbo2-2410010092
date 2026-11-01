@@ -262,6 +262,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 4);
         isiPanel.add(npmField, gridBagConstraints);
 
+        namaField.setToolTipText("Nama harus berupa huruf, bukan angka");
         namaField.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 namaFieldFocusLost(evt);
@@ -276,6 +277,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         isiPanel.add(namaField, gridBagConstraints);
 
         prodiCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Program Studi", "Teknik Informatika", "Sistem Informasi", "Hukum", "Agama", "Ekonomi", " " }));
+        prodiCombo.setToolTipText("Pilih 1 Program Studi");
         prodiCombo.addItemListener(this::prodiComboItemStateChanged);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -287,6 +289,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
 
         alamatArea.setColumns(20);
         alamatArea.setRows(5);
+        alamatArea.setToolTipText("Alamat boleh berisi huruf dan angka");
         jScrollPane1.setViewportView(alamatArea);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -298,6 +301,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 4);
         isiPanel.add(jScrollPane1, gridBagConstraints);
 
+        emailField.setToolTipText("Email harus sesuai dengan ketentuan");
         emailField.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 emailFieldFocusLost(evt);
@@ -311,6 +315,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 4);
         isiPanel.add(emailField, gridBagConstraints);
 
+        nomorField.setToolTipText("Nomor harus berisi angka");
         nomorField.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 nomorFieldFocusLost(evt);
@@ -340,6 +345,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
 
         setujuCheck.setMnemonic('T');
         setujuCheck.setText("Setuju Dengan Tata Tertib Perpustakaan");
+        setujuCheck.setToolTipText("Harus dicentang sebelum klik tombol daftar");
         setujuCheck.addItemListener(this::setujuCheckItemStateChanged);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -421,6 +427,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         jenisGroup.add(mahasiswaRadio);
         mahasiswaRadio.setMnemonic('M');
         mahasiswaRadio.setText("Mahasiswa");
+        mahasiswaRadio.setToolTipText("");
         jenisPanel.add(mahasiswaRadio);
 
         jenisGroup.add(dosenRadio);
