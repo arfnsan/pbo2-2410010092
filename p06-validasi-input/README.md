@@ -19,7 +19,7 @@
 <img width="960" height="540" alt="Screenshot 2026-11-01 223143" src="https://github.com/user-attachments/assets/b5f3efde-ddca-4bc8-908d-7a2d37a8f84e" />
 
 ### Hasil commit
-<img width="568" height="44" alt="image" src="https://github.com/user-attachments/assets/8d722bdc-aacc-4470-a816-f0182c1fecd4" />
+<img width="959" height="63" alt="image" src="https://github.com/user-attachments/assets/c0434fe9-5d4d-419d-90f1-3fa46a4baece" />
 
 ---
 
