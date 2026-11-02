@@ -1,7 +1,7 @@
 # P06
 
 ### Foto atau pindaian lembar peer review yang Anda terima dari teman
-<img width="583" height="323" alt="Screenshot 2026-11-01 221842" src="https://github.com/user-attachments/assets/6a2d4c28-53db-44a8-b7f8-5cea20945f7a" />
+<img width="1251" height="1600" alt="WhatsApp Image 2026-11-03 at 00 09 11" src="https://github.com/user-attachments/assets/8e58e84e-7401-4024-839d-ebf37d1d1042" />
 
 ### Nama peninjau: Muhammad Rifaldi | Nama pemilik form: Muhammad Arifin Ikhsan
 
