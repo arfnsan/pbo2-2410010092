@@ -1,7 +1,7 @@
 # P06
 
 ### Foto atau pindaian lembar peer review yang Anda terima dari teman
-<img width="583" height="323" alt="Screenshot 2026-11-01 221842" src="https://github.com/user-attachments/assets/6a2d4c28-53db-44a8-b7f8-5cea20945f7a" />
+<img width="1251" height="1600" alt="WhatsApp Image 2026-11-03 at 00 09 11" src="https://github.com/user-attachments/assets/8e58e84e-7401-4024-839d-ebf37d1d1042" />
 
 ### Nama peninjau: Muhammad Rifaldi | Nama pemilik form: Muhammad Arifin Ikhsan
 
@@ -19,7 +19,7 @@
 <img width="960" height="540" alt="Screenshot 2026-11-01 223143" src="https://github.com/user-attachments/assets/b5f3efde-ddca-4bc8-908d-7a2d37a8f84e" />
 
 ### Hasil commit
-<img width="568" height="44" alt="image" src="https://github.com/user-attachments/assets/8d722bdc-aacc-4470-a816-f0182c1fecd4" />
+<img width="959" height="63" alt="image" src="https://github.com/user-attachments/assets/c0434fe9-5d4d-419d-90f1-3fa46a4baece" />
 
 ---
 
@@ -46,6 +46,7 @@ Jawaban :
 4. Isian NPM mendapatkan fokus lebih dulu.
 5. Fokus ke isian nama yang diatur oleh properti displayedMnemonic (N) dan labelFor (namaField) pada namaLabel.
 6. Data tetap ada.
+7. 
 
 ---
 
