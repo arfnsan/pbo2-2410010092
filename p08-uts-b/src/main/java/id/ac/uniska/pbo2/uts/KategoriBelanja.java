@@ -12,7 +12,7 @@ package id.ac.uniska.pbo2.uts;
  */
 public enum KategoriBelanja {
     /** Kategori Belanja. Nilai toString() dipakai sebagai teks di combo dan tabel. */
-    ALAT_TULIS("Alat Tulis"),
+    ALATTULIS("Alat Tulis"),
     MAKANAN("Makanan"),
     MINUMAN("Minuman"),
     LAINNYA("Lainnya");

@@ -7,6 +7,11 @@
 package id.ac.uniska.pbo2.uts;
 
 import com.formdev.flatlaf.FlatLightLaf;
+import java.util.regex.Pattern;
+import javax.swing.JOptionPane;
+import javax.swing.ListSelectionModel;
+import javax.swing.RowFilter;
+import javax.swing.table.TableRowSorter;
 
 /**
  *
@@ -14,17 +19,30 @@ import com.formdev.flatlaf.FlatLightLaf;
  */
 public class DaftarBelanja extends javax.swing.JFrame {
     
+    private final BelanjaTableModel model = new BelanjaTableModel();
+    private final TableRowSorter<BelanjaTableModel> sorter = new TableRowSorter<>(model);
     /**
      * Creates new form DaftarBelanja
      */
     public DaftarBelanja() {
         initComponents();
         
+        barangTable.setRowSorter(sorter); // klik judul kolom untuk mengurutkan
+        barangTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        barangTable.getColumnModel().getColumn(0).setPreferredWidth(80);   // Kode
+        barangTable.getColumnModel().getColumn(1).setPreferredWidth(240);  // Judul
+        barangTable.getColumnModel().getColumn(2).setPreferredWidth(180);  // Penulis
+        barangTable.getColumnModel().getColumn(3).setPreferredWidth(90);   // Tahun Terbit
+        barangTable.getColumnModel().getColumn(4).setPreferredWidth(90);   // Status
+        
+        barangTable.getSelectionModel().addListSelectionListener(e -> perbaruiTombol());
+        
         judulLabel.putClientProperty("FlatLaf.styleClass", "h2");
         keteranganLabel.putClientProperty("FlatLaf.style", "foreground: $Label.disabledForeground");
         hargaField.putClientProperty("JTextField.placeholderText", "Tanpa titik, contoh 15000");
         getRootPane().setDefaultButton(tambahButton);
         
+        isiContoh();
         pack();
         setMinimumSize(getSize());
         setLocationRelativeTo(null);
@@ -107,8 +125,6 @@ public class DaftarBelanja extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(10, 12, 0, 0);
         isianPanel.add(kategoriLabel, gridBagConstraints);
-
-        namaField.addActionListener(this::namaFieldActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
@@ -121,9 +137,11 @@ public class DaftarBelanja extends javax.swing.JFrame {
         tombolPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 12, 12));
 
         tambahButton.setText("Tambah");
+        tambahButton.addActionListener(this::tambahButtonActionPerformed);
         tombolPanel.add(tambahButton);
 
         bersihButton.setText("Bersihkan");
+        bersihButton.addActionListener(this::bersihButtonActionPerformed);
         tombolPanel.add(bersihButton);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -134,7 +152,7 @@ public class DaftarBelanja extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(8, 4, 0, 10);
         isianPanel.add(tombolPanel, gridBagConstraints);
 
-        ketegoriCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ketegoriCombo.setModel(  new javax.swing.DefaultComboBoxModel<>(KategoriBelanja.values()));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 5;
@@ -186,17 +204,12 @@ public class DaftarBelanja extends javax.swing.JFrame {
         tablePanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(16, 16, 8, 16));
         tablePanel.setLayout(new java.awt.BorderLayout());
 
-        barangTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+        barangTable.setModel(model);
+        barangTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                barangTableMouseClicked(evt);
             }
-        ));
+        });
         jScrollPane1.setViewportView(barangTable);
 
         tablePanel.add(jScrollPane1, java.awt.BorderLayout.CENTER);
@@ -209,9 +222,19 @@ public class DaftarBelanja extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void namaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_namaFieldActionPerformed
+    private void tambahButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tambahButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_namaFieldActionPerformed
+    }//GEN-LAST:event_tambahButtonActionPerformed
+
+    private void bersihButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bersihButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bersihButtonActionPerformed
+
+    private void barangTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barangTableMouseClicked
+        if (evt.getClickCount() == 2 && belanjaTable.getSelectedRow() >= 0) {
+            ubah();
+        } 
+    }//GEN-LAST:event_barangTableMouseClicked
 
     /**
      * @param args the command line arguments
@@ -245,4 +268,92 @@ public class DaftarBelanja extends javax.swing.JFrame {
     private javax.swing.JPanel tombolPanel;
     private javax.swing.JLabel totalLabel;
     // End of variables declaration//GEN-END:variables
+    
+    private void isiContoh() {
+        // Contoh data uji sesuai Section E lembar soal
+        model.tambah(new Belanja("Pulpen", KategoriBelanja.ALATTULIS, 3500, 4));
+        model.tambah(new Belanja("Buku Tulis", KategoriBelanja.ALATTULIS, 6000, 10));
+        model.tambah(new Belanja("Tas Bekal", KategoriBelanja.LAINNYA, 26000, 1));
+        model.tambah(new Belanja("Spidol", KategoriBelanja.ALATTULIS, 12500, 2));
+        perbaruiStatus();
+    }
+
+    private int barisTerpilih() {
+        int barisTampilan = barangTable.getSelectedRow();
+        if (barisTampilan < 0) {
+            return -1;
+        }
+        return barangTable.convertRowIndexToModel(barisTampilan);
+    }
+
+    private void ubah() {
+        int baris = barisTerpilih();
+        if (baris < 0) {
+            return;
+        }
+        
+        String nama = namaField.getText().trim();
+        String hargaStr = hargaField.getText().trim();
+        
+        if (nama.isEmpty()) {
+            errorLabel.setText("Nama barang wajib diisi");
+            namaField.requestFocus();
+            return;
+        }
+        
+        int harga;
+        try {
+            harga = Integer.parseInt(hargaStr);
+            if (harga < 1 || harga > 10000000) {
+                errorLabel.setText("Harga harus angka 1 sampai 10000000");
+                hargaField.requestFocus();
+                return;
+            }
+        } catch (NumberFormatException e) {
+            errorLabel.setText("Harga harus angka 1 sampai 10000000");
+            hargaField.requestFocus();
+            return;
+        }
+
+        KategoriBelanja kategori = (KategoriBelanja) ketegoriCombo.getSelectedItem();
+        int jumlah = (Integer) jumlahSpinner.getValue();
+
+        model.ubah(baris, new Belanja(nama, kategori, harga, jumlah));
+        perbaruiStatus();
+        bersihButtonActionPerformed(null);
+    }
+
+    private void hapus() {
+        int baris = barisTerpilih();
+        if (baris < 0) {
+            return;
+        }
+        String nama = model.get(baris).nama();
+        int jawab = javax.swing.JOptionPane.showConfirmDialog(this, "Hapus barang \"" + nama + "\"?",
+                "Konfirmasi Hapus", javax.swing.JOptionPane.YES_NO_OPTION, javax.swing.JOptionPane.WARNING_MESSAGE);
+        if (jawab == javax.swing.JOptionPane.YES_OPTION) {
+            model.hapus(baris);
+            perbaruiStatus();
+        }
+    }
+    
+    private void perbaruiTombol() {
+        boolean adaPilihan = bukuTable.getSelectedRow() >= 0;
+        ubahButton.setEnabled(adaPilihan); 
+        hapusButton.setEnabled(adaPilihan); 
+        ubahItem.setEnabled(adaPilihan); 
+        hapusItem.setEnabled(adaPilihan);
+    }
+
+    private void perbaruiStatus() {
+        int total = model.hitungTotal();
+        int diskon = model.hitungDiskon();
+        int bayar = model.hitungBayar();
+
+        totalLabel.setText(String.format("Total %s, diskon %s, bayar %s",
+                model.formatRupiah(total),
+                model.formatRupiah(diskon),
+                model.formatRupiah(bayar)
+        ));
+    }
 }
