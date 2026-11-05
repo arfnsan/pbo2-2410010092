@@ -1,3 +1,5 @@
+//Nama : Muhammad Arifin Ikhsan | NPM : 2410010092
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -12,13 +14,20 @@ import com.formdev.flatlaf.FlatLightLaf;
  */
 public class DaftarBelanja extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(DaftarBelanja.class.getName());
-
     /**
      * Creates new form DaftarBelanja
      */
     public DaftarBelanja() {
         initComponents();
+        
+        judulLabel.putClientProperty("FlatLaf.styleClass", "h2");
+        keteranganLabel.putClientProperty("FlatLaf.style", "foreground: $Label.disabledForeground");
+        hargaField.putClientProperty("JTextField.placeholderText", "Tanpa titik, contoh 15000");
+        getRootPane().setDefaultButton(tambahButton);
+        
+        pack();
+        setMinimumSize(getSize());
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -39,13 +48,14 @@ public class DaftarBelanja extends javax.swing.JFrame {
         kategoriLabel = new javax.swing.JLabel();
         namaField = new javax.swing.JTextField();
         tombolPanel = new javax.swing.JPanel();
-        bersihButton = new javax.swing.JButton();
         tambahButton = new javax.swing.JButton();
+        bersihButton = new javax.swing.JButton();
         ketegoriCombo = new javax.swing.JComboBox<>();
         jumlahSpinner = new javax.swing.JSpinner();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        judulLabel = new javax.swing.JLabel();
+        keteranganLabel = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
+        errorLabel = new javax.swing.JLabel();
         tablePanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         barangTable = new javax.swing.JTable();
@@ -110,11 +120,11 @@ public class DaftarBelanja extends javax.swing.JFrame {
 
         tombolPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 12, 12));
 
-        bersihButton.setText("Bersihkan");
-        tombolPanel.add(bersihButton);
-
         tambahButton.setText("Tambah");
         tombolPanel.add(tambahButton);
+
+        bersihButton.setText("Bersihkan");
+        tombolPanel.add(bersihButton);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -140,27 +150,36 @@ public class DaftarBelanja extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(8, 4, 0, 10);
         isianPanel.add(jumlahSpinner, gridBagConstraints);
 
-        jLabel1.setText("APLIKASI DAFTAR BARANG");
+        judulLabel.setText("APLIKASI DAFTAR BARANG");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.insets = new java.awt.Insets(12, 12, 12, 12);
-        isianPanel.add(jLabel1, gridBagConstraints);
+        isianPanel.add(judulLabel, gridBagConstraints);
 
-        jLabel2.setText("Tugas UTS - Muhammad Arifin Ikhsan");
+        keteranganLabel.setText("Tugas UTS - Muhammad Arifin Ikhsan (2410010092)");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.insets = new java.awt.Insets(0, 12, 12, 12);
-        isianPanel.add(jLabel2, gridBagConstraints);
+        isianPanel.add(keteranganLabel, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         isianPanel.add(jSeparator1, gridBagConstraints);
+
+        errorLabel.setText(" ");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 12, 0, 0);
+        isianPanel.add(errorLabel, gridBagConstraints);
 
         getContentPane().add(isianPanel, java.awt.BorderLayout.LINE_START);
 
@@ -182,7 +201,7 @@ public class DaftarBelanja extends javax.swing.JFrame {
 
         tablePanel.add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
-        totalLabel.setText("ini label status");
+        totalLabel.setText(" ");
         tablePanel.add(totalLabel, java.awt.BorderLayout.PAGE_END);
 
         getContentPane().add(tablePanel, java.awt.BorderLayout.CENTER);
@@ -207,17 +226,18 @@ public class DaftarBelanja extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable barangTable;
     private javax.swing.JButton bersihButton;
+    private javax.swing.JLabel errorLabel;
     private javax.swing.JTextField hargaField;
     private javax.swing.JLabel hargaLabel;
     private javax.swing.JPanel isianPanel;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JLabel judulLabel;
     private javax.swing.JLabel jumlahLabel;
     private javax.swing.JSpinner jumlahSpinner;
     private javax.swing.JLabel kategoriLabel;
     private javax.swing.JComboBox<String> ketegoriCombo;
+    private javax.swing.JLabel keteranganLabel;
     private javax.swing.JTextField namaField;
     private javax.swing.JLabel namaLabel;
     private javax.swing.JPanel tablePanel;
